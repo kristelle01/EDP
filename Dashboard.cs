@@ -16,5 +16,10 @@ namespace elemStudentInfo
         {
             InitializeComponent();
         }
+
+        private void studentInfo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

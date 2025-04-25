@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.studentInfo = new System.Windows.Forms.Button();
-            this.student = new System.Windows.Forms.Button();
-            this.subject = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.teacher = new System.Windows.Forms.Button();
+            this.subject = new System.Windows.Forms.Button();
+            this.student = new System.Windows.Forms.Button();
+            this.studentInfo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -49,6 +49,17 @@
             this.panel1.Size = new System.Drawing.Size(1181, 75);
             this.panel1.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Rockwell", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(668, 57);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Student Information System";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Bisque;
@@ -62,37 +73,19 @@
             this.panel2.Size = new System.Drawing.Size(205, 515);
             this.panel2.TabIndex = 1;
             // 
-            // label1
+            // teacher
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Rockwell", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(668, 57);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Student Information System";
-            // 
-            // studentInfo
-            // 
-            this.studentInfo.Location = new System.Drawing.Point(16, 21);
-            this.studentInfo.Name = "studentInfo";
-            this.studentInfo.Size = new System.Drawing.Size(173, 51);
-            this.studentInfo.TabIndex = 0;
-            this.studentInfo.Text = "Student Information";
-            this.studentInfo.UseVisualStyleBackColor = true;
-            // 
-            // student
-            // 
-            this.student.Location = new System.Drawing.Point(16, 88);
-            this.student.Name = "student";
-            this.student.Size = new System.Drawing.Size(173, 51);
-            this.student.TabIndex = 1;
-            this.student.Text = "Student";
-            this.student.UseVisualStyleBackColor = true;
+            this.teacher.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.teacher.Location = new System.Drawing.Point(16, 221);
+            this.teacher.Name = "teacher";
+            this.teacher.Size = new System.Drawing.Size(173, 51);
+            this.teacher.TabIndex = 3;
+            this.teacher.Text = "Teacher";
+            this.teacher.UseVisualStyleBackColor = true;
             // 
             // subject
             // 
+            this.subject.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.subject.Location = new System.Drawing.Point(16, 154);
             this.subject.Name = "subject";
             this.subject.Size = new System.Drawing.Size(173, 51);
@@ -100,14 +93,26 @@
             this.subject.Text = "Subject";
             this.subject.UseVisualStyleBackColor = true;
             // 
-            // teacher
+            // student
             // 
-            this.teacher.Location = new System.Drawing.Point(16, 221);
-            this.teacher.Name = "teacher";
-            this.teacher.Size = new System.Drawing.Size(173, 51);
-            this.teacher.TabIndex = 3;
-            this.teacher.Text = "Teacher";
-            this.teacher.UseVisualStyleBackColor = true;
+            this.student.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.student.Location = new System.Drawing.Point(16, 88);
+            this.student.Name = "student";
+            this.student.Size = new System.Drawing.Size(173, 51);
+            this.student.TabIndex = 1;
+            this.student.Text = "Student";
+            this.student.UseVisualStyleBackColor = true;
+            // 
+            // studentInfo
+            // 
+            this.studentInfo.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentInfo.Location = new System.Drawing.Point(16, 21);
+            this.studentInfo.Name = "studentInfo";
+            this.studentInfo.Size = new System.Drawing.Size(173, 51);
+            this.studentInfo.TabIndex = 0;
+            this.studentInfo.Text = "Student Information";
+            this.studentInfo.UseVisualStyleBackColor = true;
+            this.studentInfo.Click += new System.EventHandler(this.studentInfo_Click);
             // 
             // Dashboard
             // 

@@ -28,110 +28,144 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.teacher = new System.Windows.Forms.Button();
-            this.subject = new System.Windows.Forms.Button();
-            this.student = new System.Windows.Forms.Button();
-            this.studentInfo = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.SuspendLayout();
+            panel1 = new System.Windows.Forms.Panel();
+            label1 = new System.Windows.Forms.Label();
+            panel2 = new System.Windows.Forms.Panel();
+            grade = new System.Windows.Forms.Button();
+            teacher = new System.Windows.Forms.Button();
+            subject = new System.Windows.Forms.Button();
+            student = new System.Windows.Forms.Button();
+            studentInfo = new System.Windows.Forms.Button();
+            dataGridView1 = new System.Windows.Forms.DataGridView();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Bisque;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1181, 75);
-            this.panel1.TabIndex = 0;
+            panel1.BackColor = System.Drawing.Color.Bisque;
+            panel1.Controls.Add(label1);
+            panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            panel1.Location = new System.Drawing.Point(0, 0);
+            panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(1200, 94);
+            panel1.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Rockwell", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(668, 57);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Student Information System";
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Rockwell", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label1.ForeColor = System.Drawing.Color.SaddleBrown;
+            label1.Location = new System.Drawing.Point(12, 11);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(668, 57);
+            label1.TabIndex = 0;
+            label1.Text = "Student Information System";
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Bisque;
-            this.panel2.Controls.Add(this.teacher);
-            this.panel2.Controls.Add(this.subject);
-            this.panel2.Controls.Add(this.student);
-            this.panel2.Controls.Add(this.studentInfo);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 75);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(205, 515);
-            this.panel2.TabIndex = 1;
+            panel2.BackColor = System.Drawing.Color.Bisque;
+            panel2.Controls.Add(grade);
+            panel2.Controls.Add(teacher);
+            panel2.Controls.Add(subject);
+            panel2.Controls.Add(student);
+            panel2.Controls.Add(studentInfo);
+            panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            panel2.Location = new System.Drawing.Point(0, 94);
+            panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            panel2.Name = "panel2";
+            panel2.Size = new System.Drawing.Size(205, 656);
+            panel2.TabIndex = 1;
+            // 
+            // grade
+            // 
+            grade.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            grade.Location = new System.Drawing.Point(16, 365);
+            grade.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            grade.Name = "grade";
+            grade.Size = new System.Drawing.Size(173, 64);
+            grade.TabIndex = 4;
+            grade.Text = "Grade";
+            grade.UseVisualStyleBackColor = true;
             // 
             // teacher
             // 
-            this.teacher.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.teacher.Location = new System.Drawing.Point(16, 221);
-            this.teacher.Name = "teacher";
-            this.teacher.Size = new System.Drawing.Size(173, 51);
-            this.teacher.TabIndex = 3;
-            this.teacher.Text = "Teacher";
-            this.teacher.UseVisualStyleBackColor = true;
+            teacher.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            teacher.Location = new System.Drawing.Point(16, 276);
+            teacher.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            teacher.Name = "teacher";
+            teacher.Size = new System.Drawing.Size(173, 64);
+            teacher.TabIndex = 3;
+            teacher.Text = "Teacher";
+            teacher.UseVisualStyleBackColor = true;
             // 
             // subject
             // 
-            this.subject.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.subject.Location = new System.Drawing.Point(16, 154);
-            this.subject.Name = "subject";
-            this.subject.Size = new System.Drawing.Size(173, 51);
-            this.subject.TabIndex = 2;
-            this.subject.Text = "Subject";
-            this.subject.UseVisualStyleBackColor = true;
+            subject.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            subject.Location = new System.Drawing.Point(16, 192);
+            subject.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            subject.Name = "subject";
+            subject.Size = new System.Drawing.Size(173, 64);
+            subject.TabIndex = 2;
+            subject.Text = "Subject";
+            subject.UseVisualStyleBackColor = true;
             // 
             // student
             // 
-            this.student.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.student.Location = new System.Drawing.Point(16, 88);
-            this.student.Name = "student";
-            this.student.Size = new System.Drawing.Size(173, 51);
-            this.student.TabIndex = 1;
-            this.student.Text = "Student";
-            this.student.UseVisualStyleBackColor = true;
+            student.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            student.Location = new System.Drawing.Point(16, 110);
+            student.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            student.Name = "student";
+            student.Size = new System.Drawing.Size(173, 64);
+            student.TabIndex = 1;
+            student.Text = "Student";
+            student.UseVisualStyleBackColor = true;
             // 
             // studentInfo
             // 
-            this.studentInfo.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studentInfo.Location = new System.Drawing.Point(16, 21);
-            this.studentInfo.Name = "studentInfo";
-            this.studentInfo.Size = new System.Drawing.Size(173, 51);
-            this.studentInfo.TabIndex = 0;
-            this.studentInfo.Text = "Student Information";
-            this.studentInfo.UseVisualStyleBackColor = true;
-            this.studentInfo.Click += new System.EventHandler(this.studentInfo_Click);
+            studentInfo.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            studentInfo.Location = new System.Drawing.Point(16, 26);
+            studentInfo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            studentInfo.Name = "studentInfo";
+            studentInfo.Size = new System.Drawing.Size(173, 64);
+            studentInfo.TabIndex = 0;
+            studentInfo.Text = "Student Information";
+            studentInfo.UseVisualStyleBackColor = true;
+            studentInfo.Click += studentInfo_Click;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new System.Drawing.Point(208, 98);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new System.Drawing.Size(990, 575);
+            dataGridView1.TabIndex = 2;
             // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::elemStudentInfo.Properties.Resources.Untitled_design__2_;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1181, 590);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "Dashboard";
-            this.Text = "Dashboard";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.Untitled_design__2_;
+            BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            ClientSize = new System.Drawing.Size(1200, 750);
+            Controls.Add(dataGridView1);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
+            DoubleBuffered = true;
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            Name = "Dashboard";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "Dashboard";
+            Load += Dashboard_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
@@ -143,5 +177,7 @@
         private System.Windows.Forms.Button teacher;
         private System.Windows.Forms.Button subject;
         private System.Windows.Forms.Button student;
+        private System.Windows.Forms.Button grade;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

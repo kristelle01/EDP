@@ -96,7 +96,7 @@
             showpass.Name = "showpass";
             showpass.Size = new System.Drawing.Size(199, 24);
             showpass.TabIndex = 7;
-            showpass.Text = "Show Password Cahracter";
+            showpass.Text = "Show Password Character";
             showpass.UseVisualStyleBackColor = true;
             showpass.CheckedChanged += showpass_CheckedChanged;
             // 

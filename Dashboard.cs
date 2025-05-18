@@ -21,23 +21,10 @@ namespace elemStudentInfo
 
         private void studentInfo_Click(object sender, EventArgs e)
         {
-            try
-            {
-                // Fetch all patients and display in DataGridView
-                string query = "SELECT * FROM students";
-                using (var reader = DatabaseHelper.ExecuteQuery(query))
-                {
-                    DataTable table = new DataTable();
-                    table.Load(reader);
-                    dataGridView1.DataSource = table;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
+            StudentInfo si = new StudentInfo();
+            si.ShowDialog(); // Open the StudentInfo form modally
         }
+
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
@@ -47,6 +34,23 @@ namespace elemStudentInfo
         private void student_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Enrollment si = new Enrollment();
+            si.ShowDialog(); // Open the StudentInfo form modally
+        }
+
+        private void subject_Click(object sender, EventArgs e)
+        {
+            Subject si = new Subject();
+            si.ShowDialog(); // Open the StudentInfo form modally
         }
     }
 }

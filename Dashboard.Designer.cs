@@ -101,6 +101,7 @@
             grade.TabIndex = 4;
             grade.Text = "Grade";
             grade.UseVisualStyleBackColor = true;
+            grade.Click += grade_Click;
             // 
             // teacher
             // 

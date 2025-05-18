@@ -58,5 +58,11 @@ namespace elemStudentInfo
             Teachers si = new Teachers();
             si.ShowDialog();
         }
+
+        private void grade_Click(object sender, EventArgs e)
+        {
+            Grade si = new Grade();
+            si.ShowDialog();
+        }
     }
 }

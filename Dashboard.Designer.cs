@@ -112,6 +112,7 @@
             teacher.TabIndex = 3;
             teacher.Text = "Teacher";
             teacher.UseVisualStyleBackColor = true;
+            teacher.Click += teacher_Click;
             // 
             // subject
             // 

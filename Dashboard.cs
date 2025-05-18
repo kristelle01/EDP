@@ -52,5 +52,11 @@ namespace elemStudentInfo
             Subject si = new Subject();
             si.ShowDialog(); // Open the StudentInfo form modally
         }
+
+        private void teacher_Click(object sender, EventArgs e)
+        {
+            Teachers si = new Teachers();
+            si.ShowDialog();
+        }
     }
 }

@@ -31,6 +31,7 @@
             panel1 = new System.Windows.Forms.Panel();
             label1 = new System.Windows.Forms.Label();
             panel2 = new System.Windows.Forms.Panel();
+            btnclass = new System.Windows.Forms.Button();
             button1 = new System.Windows.Forms.Button();
             grade = new System.Windows.Forms.Button();
             teacher = new System.Windows.Forms.Button();
@@ -49,7 +50,7 @@
             panel1.Location = new System.Drawing.Point(0, 0);
             panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(1234, 86);
+            panel1.Size = new System.Drawing.Size(1298, 86);
             panel1.TabIndex = 0;
             // 
             // label1
@@ -66,6 +67,7 @@
             // panel2
             // 
             panel2.BackColor = System.Drawing.Color.Bisque;
+            panel2.Controls.Add(btnclass);
             panel2.Controls.Add(button1);
             panel2.Controls.Add(grade);
             panel2.Controls.Add(teacher);
@@ -76,8 +78,20 @@
             panel2.Location = new System.Drawing.Point(0, 86);
             panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new System.Drawing.Size(205, 612);
+            panel2.Size = new System.Drawing.Size(205, 719);
             panel2.TabIndex = 1;
+            // 
+            // btnclass
+            // 
+            btnclass.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            btnclass.Location = new System.Drawing.Point(12, 535);
+            btnclass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            btnclass.Name = "btnclass";
+            btnclass.Size = new System.Drawing.Size(173, 64);
+            btnclass.TabIndex = 6;
+            btnclass.Text = "Classes";
+            btnclass.UseVisualStyleBackColor = true;
+            btnclass.Click += btnclass_Click;
             // 
             // button1
             // 
@@ -135,8 +149,9 @@
             student.Name = "student";
             student.Size = new System.Drawing.Size(173, 64);
             student.TabIndex = 1;
-            student.Text = "Student";
+            student.Text = "Student Attendance";
             student.UseVisualStyleBackColor = true;
+            student.Click += student_Click_1;
             // 
             // studentInfo
             // 
@@ -156,7 +171,7 @@
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Untitled_design__2_;
             BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            ClientSize = new System.Drawing.Size(1234, 698);
+            ClientSize = new System.Drawing.Size(1298, 805);
             Controls.Add(panel2);
             Controls.Add(panel1);
             DoubleBuffered = true;
@@ -185,5 +200,6 @@
         private System.Windows.Forms.Button student;
         private System.Windows.Forms.Button grade;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnclass;
     }
 }

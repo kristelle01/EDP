@@ -64,5 +64,17 @@ namespace elemStudentInfo
             Grade si = new Grade();
             si.ShowDialog();
         }
+
+        private void btnclass_Click(object sender, EventArgs e)
+        {
+            Class si = new Class();
+            si.ShowDialog();
+        }
+
+        private void student_Click_1(object sender, EventArgs e)
+        {
+            Attendance si = new Attendance();
+            si.ShowDialog();
+        }
     }
 }

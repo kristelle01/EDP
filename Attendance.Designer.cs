@@ -48,6 +48,8 @@
             label4 = new System.Windows.Forms.Label();
             dataGridView1 = new System.Windows.Forms.DataGridView();
             txtattDate = new System.Windows.Forms.TextBox();
+            button1 = new System.Windows.Forms.Button();
+            comboFilterStatus = new System.Windows.Forms.ComboBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -75,9 +77,9 @@
             // 
             btndelete.BackColor = System.Drawing.SystemColors.AppWorkspace;
             btndelete.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            btndelete.Location = new System.Drawing.Point(458, 276);
+            btndelete.Location = new System.Drawing.Point(362, 294);
             btndelete.Name = "btndelete";
-            btndelete.Size = new System.Drawing.Size(116, 37);
+            btndelete.Size = new System.Drawing.Size(116, 47);
             btndelete.TabIndex = 26;
             btndelete.Text = "DELETE";
             btndelete.UseVisualStyleBackColor = false;
@@ -87,9 +89,9 @@
             // 
             btnupdate.BackColor = System.Drawing.SystemColors.AppWorkspace;
             btnupdate.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            btnupdate.Location = new System.Drawing.Point(301, 276);
+            btnupdate.Location = new System.Drawing.Point(190, 294);
             btnupdate.Name = "btnupdate";
-            btnupdate.Size = new System.Drawing.Size(116, 37);
+            btnupdate.Size = new System.Drawing.Size(116, 48);
             btnupdate.TabIndex = 25;
             btnupdate.Text = "UPDATE";
             btnupdate.UseVisualStyleBackColor = false;
@@ -99,9 +101,9 @@
             // 
             btnadd.BackColor = System.Drawing.SystemColors.AppWorkspace;
             btnadd.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            btnadd.Location = new System.Drawing.Point(147, 276);
+            btnadd.Location = new System.Drawing.Point(37, 294);
             btnadd.Name = "btnadd";
-            btnadd.Size = new System.Drawing.Size(116, 37);
+            btnadd.Size = new System.Drawing.Size(116, 47);
             btnadd.TabIndex = 24;
             btnadd.Text = "ADD";
             btnadd.UseVisualStyleBackColor = false;
@@ -109,7 +111,7 @@
             // 
             // txtstatus
             // 
-            txtstatus.Location = new System.Drawing.Point(163, 223);
+            txtstatus.Location = new System.Drawing.Point(174, 252);
             txtstatus.Name = "txtstatus";
             txtstatus.Size = new System.Drawing.Size(143, 27);
             txtstatus.TabIndex = 23;
@@ -118,7 +120,7 @@
             // 
             status.AutoSize = true;
             status.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            status.Location = new System.Drawing.Point(32, 227);
+            status.Location = new System.Drawing.Point(43, 256);
             status.Name = "status";
             status.Size = new System.Drawing.Size(60, 23);
             status.TabIndex = 22;
@@ -126,7 +128,7 @@
             // 
             // txtclassID
             // 
-            txtclassID.Location = new System.Drawing.Point(163, 181);
+            txtclassID.Location = new System.Drawing.Point(174, 210);
             txtclassID.Name = "txtclassID";
             txtclassID.Size = new System.Drawing.Size(143, 27);
             txtclassID.TabIndex = 21;
@@ -135,7 +137,7 @@
             // 
             classID.AutoSize = true;
             classID.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            classID.Location = new System.Drawing.Point(28, 185);
+            classID.Location = new System.Drawing.Point(39, 214);
             classID.Name = "classID";
             classID.Size = new System.Drawing.Size(72, 23);
             classID.TabIndex = 20;
@@ -143,7 +145,7 @@
             // 
             // txtstudentID
             // 
-            txtstudentID.Location = new System.Drawing.Point(163, 139);
+            txtstudentID.Location = new System.Drawing.Point(174, 168);
             txtstudentID.Name = "txtstudentID";
             txtstudentID.Size = new System.Drawing.Size(143, 27);
             txtstudentID.TabIndex = 19;
@@ -152,7 +154,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label1.Location = new System.Drawing.Point(28, 143);
+            label1.Location = new System.Drawing.Point(39, 172);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(97, 23);
             label1.TabIndex = 18;
@@ -160,7 +162,7 @@
             // 
             // txtattendanceID
             // 
-            txtattendanceID.Location = new System.Drawing.Point(163, 100);
+            txtattendanceID.Location = new System.Drawing.Point(174, 129);
             txtattendanceID.Name = "txtattendanceID";
             txtattendanceID.Size = new System.Drawing.Size(143, 27);
             txtattendanceID.TabIndex = 17;
@@ -169,7 +171,7 @@
             // 
             clasID.AutoSize = true;
             clasID.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            clasID.Location = new System.Drawing.Point(28, 100);
+            clasID.Location = new System.Drawing.Point(39, 129);
             clasID.Name = "clasID";
             clasID.Size = new System.Drawing.Size(125, 23);
             clasID.TabIndex = 16;
@@ -177,7 +179,7 @@
             // 
             // txtclassname
             // 
-            txtclassname.Location = new System.Drawing.Point(484, 180);
+            txtclassname.Location = new System.Drawing.Point(495, 209);
             txtclassname.Name = "txtclassname";
             txtclassname.Size = new System.Drawing.Size(143, 27);
             txtclassname.TabIndex = 32;
@@ -186,7 +188,7 @@
             // 
             classname.AutoSize = true;
             classname.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            classname.Location = new System.Drawing.Point(337, 184);
+            classname.Location = new System.Drawing.Point(348, 213);
             classname.Name = "classname";
             classname.Size = new System.Drawing.Size(101, 23);
             classname.TabIndex = 31;
@@ -194,7 +196,7 @@
             // 
             // txtstuname
             // 
-            txtstuname.Location = new System.Drawing.Point(484, 138);
+            txtstuname.Location = new System.Drawing.Point(495, 167);
             txtstuname.Name = "txtstuname";
             txtstuname.Size = new System.Drawing.Size(143, 27);
             txtstuname.TabIndex = 30;
@@ -203,7 +205,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label3.Location = new System.Drawing.Point(333, 142);
+            label3.Location = new System.Drawing.Point(344, 171);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(126, 23);
             label3.TabIndex = 29;
@@ -213,7 +215,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label4.Location = new System.Drawing.Point(333, 100);
+            label4.Location = new System.Drawing.Point(344, 129);
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(145, 23);
             label4.TabIndex = 27;
@@ -225,7 +227,7 @@
             dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new System.Drawing.Point(11, 320);
+            dataGridView1.Location = new System.Drawing.Point(12, 347);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new System.Drawing.Size(667, 184);
@@ -233,17 +235,41 @@
             // 
             // txtattDate
             // 
-            txtattDate.Location = new System.Drawing.Point(484, 96);
+            txtattDate.Location = new System.Drawing.Point(495, 125);
             txtattDate.Name = "txtattDate";
             txtattDate.Size = new System.Drawing.Size(143, 27);
             txtattDate.TabIndex = 35;
+            // 
+            // button1
+            // 
+            button1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            button1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            button1.Location = new System.Drawing.Point(511, 294);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(166, 47);
+            button1.TabIndex = 36;
+            button1.Text = "GENERATE ATTENDACE REPORT";
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // comboFilterStatus
+            // 
+            comboFilterStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            comboFilterStatus.FormattingEnabled = true;
+            comboFilterStatus.Items.AddRange(new object[] { "All", "Present", "Absent" });
+            comboFilterStatus.Location = new System.Drawing.Point(528, 83);
+            comboFilterStatus.Name = "comboFilterStatus";
+            comboFilterStatus.Size = new System.Drawing.Size(151, 28);
+            comboFilterStatus.TabIndex = 37;
+            comboFilterStatus.SelectedIndexChanged += comboFilterStatus_SelectedIndexChanged;
             // 
             // Attendance
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.Bisque;
-            ClientSize = new System.Drawing.Size(689, 509);
+            ClientSize = new System.Drawing.Size(689, 538);
+            Controls.Add(comboFilterStatus);
+            Controls.Add(button1);
             Controls.Add(txtattDate);
             Controls.Add(dataGridView1);
             Controls.Add(txtclassname);
@@ -298,5 +324,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtattDate;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox attendancestatus;
+        private System.Windows.Forms.ComboBox comboFilterStatus;
     }
 }

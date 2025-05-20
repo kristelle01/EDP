@@ -135,6 +135,7 @@
             frmpassword.Name = "frmpassword";
             frmpassword.Size = new System.Drawing.Size(388, 30);
             frmpassword.TabIndex = 4;
+            frmpassword.UseSystemPasswordChar = true;
             frmpassword.TextChanged += password_TextChanged;
             // 
             // pass

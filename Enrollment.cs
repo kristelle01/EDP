@@ -19,6 +19,8 @@ namespace elemStudentInfo
         public Enrollment()
         {
             InitializeComponent();
+            dataGridView1.CellClick += dataGridView1_CellContentClick;
+
         }
 
         private void Enrollment_Load(object sender, EventArgs e)
@@ -79,6 +81,48 @@ namespace elemStudentInfo
                 {
                     MessageBox.Show("Failed to load enrollments: " + ex.Message);
                 }
+            }
+        }
+
+        private void btnroll_Click(object sender, EventArgs e)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+
+                    string query = "INSERT INTO enrollments (student_id, class_id, status) " +
+                                   "VALUES (@student_id, @class_id, @status)";
+
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@student_id", txtstudentID.Text.Trim());
+                    cmd.Parameters.AddWithValue("@class_id", txtclassID.Text.Trim());
+                    cmd.Parameters.AddWithValue("@status", txtstatus.Text.Trim());
+
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Student enrolled successfully!");
+
+                    LoadEnrollments();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error enrolling student: " + ex.Message);
+                }
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+
+                // Safely assign values using column indexes
+                txtenrollmentID.Text = row.Cells[0].Value?.ToString(); // enrollment_id
+                txtstudentID.Text = row.Cells[1].Value?.ToString(); // student_id
+                txtclassID.Text = row.Cells[4].Value?.ToString(); // class_id
             }
         }
     }

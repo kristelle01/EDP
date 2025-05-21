@@ -72,6 +72,22 @@ namespace elemStudentInfo
                 using (MySqlConnection con = new MySqlConnection(connectionString))
                 {
                     con.Open();
+
+                    // Check for duplicate grade
+                    string checkQuery = "SELECT COUNT(*) FROM grades WHERE student_id = @student_id AND subject_id = @subject_id";
+                    MySqlCommand checkCmd = new MySqlCommand(checkQuery, con);
+                    checkCmd.Parameters.AddWithValue("@student_id", txtstudentID.Text);
+                    checkCmd.Parameters.AddWithValue("@subject_id", txtsubID.Text);
+
+                    int count = Convert.ToInt32(checkCmd.ExecuteScalar());
+
+                    if (count > 0)
+                    {
+                        MessageBox.Show("Grade for this student and subject already exists. Please update it instead.");
+                        return;
+                    }
+
+                    // Insert if no duplicate
                     string query = "INSERT INTO grades (student_id, subject_id, grade) VALUES (@student_id, @subject_id, @grade)";
                     MySqlCommand cmd = new MySqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@student_id", txtstudentID.Text);

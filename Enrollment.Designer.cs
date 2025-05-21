@@ -32,14 +32,14 @@
             enroll = new System.Windows.Forms.Label();
             enrollmentId = new System.Windows.Forms.Label();
             studentID = new System.Windows.Forms.Label();
-            status = new System.Windows.Forms.Label();
             classID = new System.Windows.Forms.Label();
             txtenrollmentID = new System.Windows.Forms.TextBox();
             txtstudentID = new System.Windows.Forms.TextBox();
-            txtstatus = new System.Windows.Forms.TextBox();
             txtclassID = new System.Windows.Forms.TextBox();
             btnroll = new System.Windows.Forms.Button();
             dataGridView1 = new System.Windows.Forms.DataGridView();
+            txtstatus = new System.Windows.Forms.TextBox();
+            label1 = new System.Windows.Forms.Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -84,16 +84,6 @@
             studentID.TabIndex = 3;
             studentID.Text = "Student ID";
             // 
-            // status
-            // 
-            status.AutoSize = true;
-            status.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            status.Location = new System.Drawing.Point(413, 149);
-            status.Name = "status";
-            status.Size = new System.Drawing.Size(60, 23);
-            status.TabIndex = 5;
-            status.Text = "Status";
-            // 
             // classID
             // 
             classID.AutoSize = true;
@@ -118,13 +108,6 @@
             txtstudentID.Size = new System.Drawing.Size(125, 27);
             txtstudentID.TabIndex = 7;
             // 
-            // txtstatus
-            // 
-            txtstatus.Location = new System.Drawing.Point(502, 151);
-            txtstatus.Name = "txtstatus";
-            txtstatus.Size = new System.Drawing.Size(125, 27);
-            txtstatus.TabIndex = 9;
-            // 
             // txtclassID
             // 
             txtclassID.Location = new System.Drawing.Point(502, 101);
@@ -142,6 +125,7 @@
             btnroll.TabIndex = 10;
             btnroll.Text = "ENROLL";
             btnroll.UseVisualStyleBackColor = false;
+            btnroll.Click += btnroll_Click;
             // 
             // dataGridView1
             // 
@@ -154,6 +138,24 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new System.Drawing.Size(689, 194);
             dataGridView1.TabIndex = 11;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // txtstatus
+            // 
+            txtstatus.Location = new System.Drawing.Point(502, 148);
+            txtstatus.Name = "txtstatus";
+            txtstatus.Size = new System.Drawing.Size(125, 27);
+            txtstatus.TabIndex = 13;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label1.Location = new System.Drawing.Point(413, 149);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(60, 23);
+            label1.TabIndex = 12;
+            label1.Text = "Status";
             // 
             // Enrollment
             // 
@@ -161,13 +163,13 @@
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.Bisque;
             ClientSize = new System.Drawing.Size(694, 453);
+            Controls.Add(txtstatus);
+            Controls.Add(label1);
             Controls.Add(dataGridView1);
             Controls.Add(btnroll);
-            Controls.Add(txtstatus);
             Controls.Add(txtclassID);
             Controls.Add(txtstudentID);
             Controls.Add(txtenrollmentID);
-            Controls.Add(status);
             Controls.Add(classID);
             Controls.Add(studentID);
             Controls.Add(enrollmentId);
@@ -191,13 +193,13 @@
         private System.Windows.Forms.Label enroll;
         private System.Windows.Forms.Label enrollmentId;
         private System.Windows.Forms.Label studentID;
-        private System.Windows.Forms.Label status;
         private System.Windows.Forms.Label classID;
         private System.Windows.Forms.TextBox txtenrollmentID;
         private System.Windows.Forms.TextBox txtstudentID;
-        private System.Windows.Forms.TextBox txtstatus;
         private System.Windows.Forms.TextBox txtclassID;
         private System.Windows.Forms.Button btnroll;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtstatus;
+        private System.Windows.Forms.Label label1;
     }
 }

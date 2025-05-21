@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using MySqlX.XDevAPI.Relational;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace elemStudentInfo
 {
@@ -197,6 +198,50 @@ namespace elemStudentInfo
             {
                 // Filter the DataTable to show only records with selected status
                 attendanceTable.DefaultView.RowFilter = $"status = '{selectedStatus}'";
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dataGridView1.Rows.Count == 0)
+                {
+                    MessageBox.Show("No data to export.");
+                    return;
+                }
+
+                Excel.Application excelApp = new Excel.Application();
+                Excel.Workbook workbook = excelApp.Workbooks.Add(Type.Missing);
+                Excel.Worksheet worksheet = (Excel.Worksheet)workbook.Sheets[1];
+                worksheet.Name = "Attendance Report";
+
+                // Export column headers
+                for (int i = 1; i <= dataGridView1.Columns.Count; i++)
+                {
+                    worksheet.Cells[1, i] = dataGridView1.Columns[i - 1].HeaderText;
+                }
+
+                // Export filtered rows
+                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                {
+                    for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                    {
+                        worksheet.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value?.ToString();
+                    }
+                }
+
+                // Auto-fit columns
+                worksheet.Columns.AutoFit();
+
+                // Show Excel and release objects
+                excelApp.Visible = true;
+
+                MessageBox.Show("Export to Excel completed successfully.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error exporting to Excel: " + ex.Message);
             }
         }
     }

@@ -250,6 +250,7 @@
             button1.TabIndex = 36;
             button1.Text = "GENERATE ATTENDACE REPORT";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // comboFilterStatus
             // 
